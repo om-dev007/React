@@ -1,6 +1,6 @@
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div>
       <h1> Hello from chai aur react </h1>
