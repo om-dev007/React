@@ -9,3 +9,6 @@ const App = () => {
 }
 
 export default App;
+
+
+//  yaha pe function ka name hamesha capital letter me hi rakho 
