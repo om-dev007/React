@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useState, useCallback} from 'react'
 // import { useEffect } from 'react'
 import "./App.css"
+import { useRef } from 'react'
 
 const App = () => {
 
@@ -29,6 +30,13 @@ const App = () => {
     setPassword(pass)
   }, [length, charAllowed, numberAllowed, setPassword])  
 
+  const passwordRef = useRef(null)
+
+  const copyPasswordToClipboard = useCallback(() => {
+    passwordRef.current?.select()
+    window.navigator.clipboard.writeText(password )
+  }, [password])
+
   useEffect(() => {
     passwordGenerator()
   }, [length, numberAllowed, charAllowed, passwordGenerator])
@@ -44,7 +52,7 @@ const App = () => {
           placeholder='password'
           readOnly
         />
-        <button>Copy</button>
+        <button onClick={copyPasswordToClipboard}>Copy</button>
         <br />
         <div className='input-sec'>
           <input type='range' min={8}
