@@ -1,0 +1,41 @@
+.password-generator {
+  background-color: gray;
+  color: orange;
+  text-align: center;
+  justify-content: center;
+}
+
+input {
+  padding: 1em;
+  border-radius: 1em;
+  border: 0em;
+}
+
+button {
+  padding: 0.6em;
+  border-radius: 0.5em;
+  border: none;
+  background-color: rgb(0, 132, 255);
+  cursor: pointer;
+  margin: 1em;
+}
+
+.input-sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+}
+
+.input-sec input {
+  cursor: pointer;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: center;
+}
+
+.d-flex div {
+  margin: 0.5em;
+}
