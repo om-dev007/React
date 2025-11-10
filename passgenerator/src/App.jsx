@@ -27,7 +27,7 @@ const App = () => {
     }
 
     setPassword(pass)
-  }, [length, setcharAllowed, setnumberAllowed, setPassword])  
+  }, [length, charAllowed, numberAllowed, setPassword])  
 
   useEffect(() => {
     passwordGenerator()
@@ -69,7 +69,7 @@ const App = () => {
               type="checkbox"
               defaultChecked={charAllowed}
               id='charInput'
-              onChange={() => { setnumberAllowed((prev) => !prev) }}
+              onChange={() => { setcharAllowed((prev) => !prev) }}
             />
             <label htmlFor="charInput">Character</label>
           </div>
